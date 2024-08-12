@@ -22,4 +22,4 @@ public class bubbleSort {
           srt(arr);
           print(arr);
     }
-}
+} 
