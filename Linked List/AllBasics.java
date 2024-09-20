@@ -85,6 +85,29 @@ public class AllBasics {
         return val;
 
     }
+
+    public int RemoveLast(){
+        if(size == 0){
+            System.out.println("ll is empty");
+            return Integer.MIN_VALUE;
+        } else if( size == 1){
+            int val = head.data;
+            head = tail = null;
+            size = 0;
+            return val;
+        }
+
+        Node prev = head;
+        for(int i = 0; i<size-2; i++){
+            prev = prev.next;
+        }
+
+        int val = prev.next.data; //tail.data
+        prev.next = null;
+        tail = prev;
+        size--;
+        return val;
+    }
     public static void main(String[] args) {
 
         AllBasics ll = new AllBasics();
@@ -106,9 +129,13 @@ public class AllBasics {
         ll.AddAtPosition(2, 3 );
 
         ll.Print();
-        System.out.println(ll.size);
+        // System.out.println(ll.size);
         ll.RemoveFirst();
         
+        ll.Print();
+        // System.out.println(ll.size);
+
+        ll.RemoveLast();
         ll.Print();
         System.out.println(ll.size);
 
