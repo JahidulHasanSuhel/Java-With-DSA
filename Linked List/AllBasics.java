@@ -108,6 +108,35 @@ public class AllBasics {
         size--;
         return val;
     }
+
+     public int itrSearch(int key){
+        Node temp = head;
+        int i = 0;
+
+        while(temp != null){
+            if(temp.data == key){
+                return i;
+            }
+            temp = temp.next;
+            i++;
+        }
+        return - 1;
+     }
+
+     public void Reverse(){
+        Node prev = null;
+        Node curr = tail = head;
+        Node next;
+
+        while(curr != null){
+            next = curr.next;
+            curr.next = prev;
+            prev = curr;
+            curr = next;
+        }
+        head = prev;
+     }
+
     public static void main(String[] args) {
 
         AllBasics ll = new AllBasics();
@@ -130,14 +159,21 @@ public class AllBasics {
 
         ll.Print();
         // System.out.println(ll.size);
-        ll.RemoveFirst();
+        // ll.RemoveFirst();
         
-        ll.Print();
+        // ll.Print();
         // System.out.println(ll.size);
 
-        ll.RemoveLast();
+        // ll.RemoveLast();
+        // ll.Print();
+        // System.out.println(ll.size);
+
+        // System.out.println(ll.itrSearch(3));
+        // System.out.println(ll.itrSearch(10));
+        ll.Reverse();
         ll.Print();
-        System.out.println(ll.size);
+
+        
 
     }
 }
