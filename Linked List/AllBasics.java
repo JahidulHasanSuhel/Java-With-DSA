@@ -137,6 +137,53 @@ public class AllBasics {
         head = prev;
      }
 
+     // slow - fast approach
+     public Node FindMid(Node head){ // helper to find palindrome
+        Node slow = head;
+        Node fast = head;
+
+        while(fast != null && fast.next != null){
+            slow = slow.next;
+            fast = fast.next.next;
+        }
+        return slow; // slow is midNode
+     }
+
+     public boolean CheackPalindrome(){
+        if(head == null || head.next == null){
+            return true;
+        }
+        //step 1: find mid
+        Node MidNode = FindMid(head);
+
+        //step 2: reverse 2nd half
+        Node prev = null;
+        Node curr = MidNode;
+        Node next;
+
+        while(curr != null){
+            next = curr.next;
+            curr.next = prev;
+            prev = curr;
+            curr = next;
+        }
+
+        Node right = prev;
+        Node left = head;
+
+        //step 3: check left & right half
+        while(right != null){
+            if(left.data != right.data){
+                return false;
+            }
+            left = left.next;
+            right = right.next;
+        }
+
+        return true;
+
+     }
+
     public static void main(String[] args) {
 
         AllBasics ll = new AllBasics();
@@ -150,31 +197,39 @@ public class AllBasics {
         // ll.AddLast(4);
         // ll.Print();
 
-        ll.AddFirst(2);
-        ll.AddFirst(1);
-        ll.AddLast(4);
-        ll.AddLast(5);
+        // ll.AddFirst(2);
+        // ll.AddFirst(1);
+        // ll.AddLast(4);
+        // ll.AddLast(5);
 
-        ll.AddAtPosition(2, 3 );
+        // ll.AddAtPosition(2, 3 );
 
-        ll.Print();
-        // System.out.println(ll.size);
-        // ll.RemoveFirst();
+        // ll.Print();
+        // // System.out.println(ll.size);
+        // // ll.RemoveFirst();
         
-        // ll.Print();
-        // System.out.println(ll.size);
+        // // ll.Print();
+        // // System.out.println(ll.size);
 
-        // ll.RemoveLast();
-        // ll.Print();
-        // System.out.println(ll.size);
+        // // ll.RemoveLast();
+        // // ll.Print();
+        // // System.out.println(ll.size);
 
-        // System.out.println(ll.itrSearch(3));
-        // System.out.println(ll.itrSearch(10));
-        ll.Reverse();
+        // // System.out.println(ll.itrSearch(3));
+        // // System.out.println(ll.itrSearch(10));
+        // ll.Reverse();
+        // ll.Print();
+
+        ll.AddLast(1);
+        ll.AddLast(2);
+        ll.AddLast(2);
+        ll.AddLast(1);
+
         ll.Print();
+        System.out.println(ll.CheackPalindrome());
 
         
 
     }
 }
- 
+  
