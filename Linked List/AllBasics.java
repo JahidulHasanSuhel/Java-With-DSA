@@ -109,7 +109,7 @@ public class AllBasics {
         return val;
     }
 
-     public int itrSearch(int key){
+    public int itrSearch(int key){
         Node temp = head;
         int i = 0;
 
@@ -123,7 +123,7 @@ public class AllBasics {
         return - 1;
      }
 
-     public void Reverse(){
+    public void Reverse(){
         Node prev = null;
         Node curr = tail = head;
         Node next;
@@ -138,7 +138,7 @@ public class AllBasics {
      }
 
      // slow - fast approach
-     public Node FindMid(Node head){ // helper to find palindrome
+    public Node FindMid(Node head){ // helper to find palindrome
         Node slow = head;
         Node fast = head;
 
@@ -149,7 +149,7 @@ public class AllBasics {
         return slow; // slow is midNode
      }
 
-     public boolean CheackPalindrome(){
+    public boolean CheackPalindrome(){
         if(head == null || head.next == null){
             return true;
         }
@@ -183,7 +183,6 @@ public class AllBasics {
         return true;
 
      }
-
     public static void main(String[] args) {
 
         AllBasics ll = new AllBasics();

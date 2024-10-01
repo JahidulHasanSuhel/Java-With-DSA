@@ -1,4 +1,4 @@
-package Exception;
+
 
 public class FInally {
     // the "Finally" block is used to execute the necessary code
