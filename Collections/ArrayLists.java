@@ -5,7 +5,7 @@ import java.util.Collections;
 public class ArrayLists {
     public static void main(String[] args) {
 
-        ArrayList <Integer> list = new ArrayList<>();
+        ArrayList <Integer> list = new ArrayList<Integer>();
 
         list.add(1);
         list.add(2);
@@ -25,11 +25,11 @@ public class ArrayLists {
         list.set(0, 5);
         System.out.println(list);
 
-        //delete element
+        //delete element 
         list.remove(3);
         System.out.println(list);
 
-        //size
+        //size 
         int sz = list.size();
         System.out.println(sz);
 
