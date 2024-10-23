@@ -66,8 +66,10 @@ public class BuildTree {
 
         // System.out.println(root.data);
 
-        tree.inorder(root);
+        // tree.inorder(root);
         // tree.preorder(root); 
         // tree.postorder(root);
+
+        
     }
 }
