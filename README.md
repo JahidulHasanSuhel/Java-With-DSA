@@ -1,0 +1,2 @@
+This repository contains implementations of Data Structures and Algorithms (DSA) using Java. It is designed for those looking to improve their DSA skills and get hands-on experience with Java programming Language. The examples range from basic to advanced, covering various algorithms and data structures.
+This repo is intended for learners, developers, and interview preparation. The code examples focus on clarity and efficiency, making it easier to understand how different data structures and algorithms work.
