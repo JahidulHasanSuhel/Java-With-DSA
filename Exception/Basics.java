@@ -30,7 +30,7 @@ public class Basics {
         // try
         // catch --> if we have to use multiple catch the first catch
         // must be child class
-        // catch --> child'a parent
+        // catch --> child's parent
         // catch --> Main parent.
 
 

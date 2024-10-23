@@ -24,7 +24,7 @@ public class QueueOperations {
         arr[rear] = data;
         
     }
-
+ 
     public static int remove(){
         if(isEmpty()){
             System.out.println("empty queue");
