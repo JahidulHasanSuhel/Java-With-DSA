@@ -1,3 +1,4 @@
+import java.util.*;
 public class BuildTree {
     public static class Node{
         int data;
@@ -56,6 +57,41 @@ public class BuildTree {
             postorder(root.right);
             System.out.print(root.data + " ");
         }
+
+        public static void levelOrder(Node root){
+            if(root == null){
+                return;
+            }
+
+            Queue<Node> q = new LinkedList<>();
+            q.add(root);
+            q.add(null);
+
+            while(!q.isEmpty()){
+                Node currNode = q.remove();//remove one by one until it's empty
+                if(currNode == null){ // if null then print nextLine
+                    System.out.println();
+                    if(q.isEmpty()){// if empty then break;
+                        break;
+                    } 
+                    else{
+                        q.add(null);// if there then add null
+                    }
+                }
+                else{
+                    System.out.print(currNode.data + " ");
+                    if(currNode.left != null){
+                        q.add(currNode.left);
+                    }
+                    if(currNode.right != null){
+                        q.add(currNode.right);
+                    }
+                }
+            }
+        }
+
+
+
     }
 
 
@@ -69,6 +105,7 @@ public class BuildTree {
         // tree.inorder(root);
         // tree.preorder(root); 
         // tree.postorder(root);
+        tree.levelOrder(root);
 
         
     }
