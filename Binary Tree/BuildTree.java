@@ -66,7 +66,7 @@ public class BuildTree {
             Queue<Node> q = new LinkedList<>();
             q.add(root);
             q.add(null);
-
+      
             while(!q.isEmpty()){
                 Node currNode = q.remove();//remove one by one until it's empty
                 if(currNode == null){ // if null then print nextLine
@@ -88,9 +88,7 @@ public class BuildTree {
                     }
                 }
             }
-        }
-
-
+        } 
 
     }
 
