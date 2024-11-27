@@ -60,6 +60,6 @@ public class creatingGraph {
             Edge e = graph[2].get(i); // src, dest, wt
             System.out.println(e.dest);
          }
-
+ 
     }
 }
